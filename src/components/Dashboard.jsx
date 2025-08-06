@@ -43,18 +43,22 @@ function Dashboard() {
     <div className="dashboard">
       <div className="container">
         <div className="main-content">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Dashboard</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Dashboard</h1>
           
           <div className="stats-grid">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
-                <Card key={index} className="stat-card text-center" hover>
-                  <div className="flex items-center justify-center mb-3">
-                    <IconComponent className="h-8 w-8 text-primary-600" />
+                <Card key={index} className="text-center" hover>
+                  <div className="flex items-center justify-center mb-4">
+                    <IconComponent className="h-8 w-8 text-cyan-400" />
                   </div>
-                  <span className="stat-number">{stat.number}</span>
-                  <span className="stat-label">{stat.label}</span>
+                  <div className="stat-number text-4xl font-bold bg-gradient-to-r from-pink-500 to-cyan-400 bg-clip-text text-transparent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="stat-label text-gray-300 text-sm font-medium uppercase tracking-wide">
+                    {stat.label}
+                  </div>
                 </Card>
               );
             })}
@@ -67,10 +71,10 @@ function Dashboard() {
             <Card.Content>
               <div className="space-y-4">
                 {recentActivity.map((activity, index) => (
-                  <div key={index} className="flex items-start justify-between p-4 bg-gray-50 rounded-lg">
+                  <div key={index} className="flex items-start justify-between p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-purple-500/50 transition-all duration-200">
                     <div className="flex-1">
-                      <p className="font-medium text-gray-900">{activity.message}</p>
-                      <p className="text-sm text-gray-500 mt-1">{activity.time}</p>
+                      <p className="font-medium text-white">{activity.message}</p>
+                      <p className="text-sm text-gray-400 mt-1">{activity.time}</p>
                     </div>
                     <Badge variant={activity.status} size="sm">
                       {activity.type}

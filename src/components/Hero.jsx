@@ -11,14 +11,14 @@ function Hero() {
           Portable, blockchain-based work history and references that stay with you forever.
           Build trust, showcase your contributions, and never lose your professional reputation.
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex gap-6 justify-center flex-wrap">
           <Link to="/dashboard">
-            <Button size="lg">
+            <Button size="lg" className="group">
               Get Started
             </Button>
           </Link>
           <a href="#features">
-            <Button variant="outline" size="lg">
+            <Button variant="secondary" size="lg" className="group">
               Learn More
             </Button>
           </a>

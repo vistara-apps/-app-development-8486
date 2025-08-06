@@ -11,21 +11,21 @@ const Button = ({
   type = 'button',
   ...props 
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden';
   
   const variants = {
-    primary: 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white hover:from-primary-600 hover:to-secondary-600 focus:ring-primary-500 shadow-md hover:shadow-lg',
-    secondary: 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 focus:ring-primary-500 shadow-sm hover:shadow-md',
-    outline: 'bg-transparent text-primary-600 border-2 border-primary-500 hover:bg-primary-50 focus:ring-primary-500',
-    ghost: 'bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500',
-    danger: 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 shadow-md hover:shadow-lg'
+    primary: 'bg-gradient-to-r from-pink-500 to-cyan-400 text-white hover:from-pink-600 hover:to-cyan-500 focus:ring-pink-500 shadow-lg hover:shadow-pink-500/25 hover:-translate-y-0.5',
+    secondary: 'bg-transparent text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 focus:ring-cyan-500 shadow-lg shadow-cyan-400/25 hover:-translate-y-0.5',
+    outline: 'bg-transparent text-purple-400 border-2 border-purple-400 hover:bg-purple-400 hover:text-white focus:ring-purple-500 shadow-lg shadow-purple-400/25 hover:-translate-y-0.5',
+    ghost: 'bg-transparent text-gray-300 hover:bg-gray-800 hover:text-white focus:ring-gray-500',
+    danger: 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600 focus:ring-red-500 shadow-lg hover:shadow-red-500/25 hover:-translate-y-0.5'
   };
   
   const sizes = {
-    sm: 'px-3 py-2 text-sm rounded-md',
-    md: 'px-4 py-2 text-base rounded-lg',
-    lg: 'px-6 py-3 text-lg rounded-lg',
-    xl: 'px-8 py-4 text-xl rounded-xl'
+    sm: 'px-4 py-2 text-sm rounded-lg',
+    md: 'px-6 py-3 text-base rounded-xl',
+    lg: 'px-8 py-4 text-lg rounded-xl',
+    xl: 'px-10 py-5 text-xl rounded-2xl'
   };
   
   const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
@@ -39,6 +39,9 @@ const Button = ({
       aria-disabled={disabled || loading}
       {...props}
     >
+      {/* Shimmer effect */}
+      <span className="absolute inset-0 -top-full bg-gradient-to-b from-transparent via-white/20 to-transparent transform skew-x-12 transition-transform duration-700 group-hover:translate-y-full"></span>
+      
       {loading && (
         <svg 
           className="animate-spin -ml-1 mr-2 h-4 w-4" 

@@ -7,16 +7,16 @@ const Badge = ({
   className = '',
   ...props 
 }) => {
-  const baseClasses = 'inline-flex items-center font-medium rounded-full';
+  const baseClasses = 'inline-flex items-center font-medium rounded-full border transition-all duration-200';
   
   const variants = {
-    default: 'bg-gray-100 text-gray-800',
-    primary: 'bg-primary-100 text-primary-800',
-    secondary: 'bg-secondary-100 text-secondary-800',
-    success: 'bg-green-100 text-green-800',
-    warning: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    info: 'bg-blue-100 text-blue-800'
+    default: 'bg-gray-800 text-gray-300 border-gray-600',
+    primary: 'bg-purple-500/20 text-purple-400 border-purple-500/50',
+    secondary: 'bg-cyan-400/20 text-cyan-400 border-cyan-400/50',
+    success: 'bg-green-500/20 text-green-400 border-green-500/50',
+    warning: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50',
+    error: 'bg-red-500/20 text-red-400 border-red-500/50',
+    info: 'bg-blue-500/20 text-blue-400 border-blue-500/50'
   };
   
   const sizes = {
