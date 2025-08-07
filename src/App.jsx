@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import References from './components/References';
 import Projects from './components/Projects';
 import Pricing from './components/Pricing';
+import ConversationalInterface from './components/ConversationalInterface';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/references" element={<References />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/create-reference" element={<ConversationalInterface />} />
         </Routes>
       </div>
     </Router>
