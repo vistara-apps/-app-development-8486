@@ -8,29 +8,32 @@ import Profile from './components/Profile';
 import References from './components/References';
 import Projects from './components/Projects';
 import Pricing from './components/Pricing';
+import ToastProvider from './components/ToastProvider';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <Router>
-      <div className="App">
-        <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Features />
-              <Pricing />
-            </>
-          } />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/references" element={<References />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </div>
-    </Router>
+    <ToastProvider>
+      <Router>
+        <div className="App">
+          <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <Features />
+                <Pricing />
+              </>
+            } />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/references" element={<References />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </div>
+      </Router>
+    </ToastProvider>
   );
 }
 
