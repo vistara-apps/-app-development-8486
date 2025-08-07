@@ -11,10 +11,11 @@ export default defineConfig({
       crypto: 'crypto-browserify',
       stream: 'stream-browserify',
       buffer: 'buffer',
+      events: 'events',
     },
   },
   optimizeDeps: {
-    include: ['buffer', 'crypto-browserify', 'stream-browserify'],
+    include: ['buffer', 'crypto-browserify', 'stream-browserify', 'events'],
   },
   build: {
     rollupOptions: {
@@ -24,6 +25,14 @@ export default defineConfig({
           buffer: 'Buffer',
         },
       },
+    },
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [],
     },
   },
 })
