@@ -434,3 +434,272 @@ body {
     justify-content: center;
   }
 }
+
+/* Conversational Interface Styles */
+.conversational-interface {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #e5e7eb;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.interface-content {
+  padding: 40px;
+}
+
+.step-content {
+  text-align: center;
+}
+
+.step-content h2 {
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.step-content p {
+  margin-bottom: 24px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.features-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.feature {
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.conversational-interface .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.conversational-interface .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.conversational-interface .form-group input,
+.conversational-interface .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.conversational-interface .form-group input:focus,
+.conversational-interface .form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rating-input {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.rating-star {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating-star:hover,
+.rating-star.active {
+  color: #fbbf24;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+.review-section {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.review-section h3 {
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.cost-info {
+  background: #fef3c7;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  color: #dc2626;
+}
+
+.result-info {
+  background: #f0f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.result-item {
+  margin-bottom: 12px;
+}
+
+.result-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1f2937;
+}
+
+.result-item code {
+  background: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.result-item a {
+  color: #3b82f6;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.next-steps {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.next-steps h3 {
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.next-steps li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.next-steps li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive design for conversational interface */
+@media (max-width: 768px) {
+  .interface-content {
+    padding: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .step-actions {
+    flex-direction: column;
+  }
+  
+  .rating-input {
+    justify-content: flex-start;
+  }
+}
