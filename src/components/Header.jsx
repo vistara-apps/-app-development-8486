@@ -13,10 +13,10 @@ function Header({ isLoggedIn, setIsLoggedIn }) {
           <nav className="nav">
             {isLoggedIn && (
               <>
-                <Link to="/dashboard">Dashboard</Link>
-                <Link to="/profile">Profile</Link>
-                <Link to="/references">References</Link>
-                <Link to="/projects">Projects</Link>
+                <Link to="/dashboard" className="nav-link">Dashboard</Link>
+                <Link to="/profile" className="nav-link">Profile</Link>
+                <Link to="/references" className="nav-link">References</Link>
+                <Link to="/projects" className="nav-link">Projects</Link>
               </>
             )}
             <ConnectButton />
