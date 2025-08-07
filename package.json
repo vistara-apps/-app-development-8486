@@ -13,6 +13,7 @@
     "@dynamic-labs/sdk-react-core": "^2.0.0",
     "@rainbow-me/rainbowkit": "^2.2.8",
     "@tanstack/react-query": ">=5.0.0",
+    "@irys/sdk": "^0.2.11",
     "axios": "^1.6.0",
     "viem": "^2.0.0",
     "wagmi": "^2.15.6",
@@ -21,7 +22,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "lucide-react": "^0.263.1",
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "uuid": "^9.0.0",
+    "crypto-js": "^4.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
