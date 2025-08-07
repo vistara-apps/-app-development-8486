@@ -897,17 +897,6 @@ body {
   margin-top: var(--space-6);
 }
 
-  .section {
-    padding: var(--space-6);
-    margin-bottom: var(--space-6);
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-  }
-}
-
 @media (max-width: 480px) {
   .hero h1 {
     font-size: var(--text-3xl);

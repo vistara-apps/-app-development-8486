@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [react()],
   define: {
     global: 'globalThis',
+    'process.env': {},
   },
   resolve: {
     alias: {
@@ -16,6 +17,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['buffer', 'crypto-browserify', 'stream-browserify', 'events'],
+    exclude: ['ox'],
   },
   build: {
     rollupOptions: {
@@ -24,11 +26,17 @@ export default defineConfig({
         globals: {
           buffer: 'Buffer',
         },
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          crypto: ['crypto-browserify', 'buffer'],
+        },
       },
     },
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    target: 'esnext',
+    minify: false,
   },
   css: {
     postcss: {

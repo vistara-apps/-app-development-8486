@@ -45,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["crypto-js", "npm:4.2.0"],\
           ["date-fns", "npm:2.30.0"],\
           ["events", "npm:3.3.0"],\
+          ["js-sha3", "npm:0.9.3"],\
           ["lucide-react", "virtual:2410017c3dae903f528267907be56fe6862ed06d790fc89589f257e6d1fd27989c33db8256bae7febc513ffc85ccbc63b4555fb526b8e83e82918476f8e1cd7a#npm:0.263.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:2410017c3dae903f528267907be56fe6862ed06d790fc89589f257e6d1fd27989c33db8256bae7febc513ffc85ccbc63b4555fb526b8e83e82918476f8e1cd7a#npm:18.3.1"],\
@@ -5309,6 +5310,7 @@ const RAW_RUNTIME_STATE =
           ["crypto-js", "npm:4.2.0"],\
           ["date-fns", "npm:2.30.0"],\
           ["events", "npm:3.3.0"],\
+          ["js-sha3", "npm:0.9.3"],\
           ["lucide-react", "virtual:2410017c3dae903f528267907be56fe6862ed06d790fc89589f257e6d1fd27989c33db8256bae7febc513ffc85ccbc63b4555fb526b8e83e82918476f8e1cd7a#npm:0.263.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:2410017c3dae903f528267907be56fe6862ed06d790fc89589f257e6d1fd27989c33db8256bae7febc513ffc85ccbc63b4555fb526b8e83e82918476f8e1cd7a#npm:18.3.1"],\
@@ -7712,6 +7714,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../root/.yarn/berry/cache/js-sha3-npm-0.8.0-decf3ddcfa-10c0.zip/node_modules/js-sha3/",\
         "packageDependencies": [\
           ["js-sha3", "npm:0.8.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.9.3", {\
+        "packageLocation": "../../../root/.yarn/berry/cache/js-sha3-npm-0.9.3-10bd5000df-10c0.zip/node_modules/js-sha3/",\
+        "packageDependencies": [\
+          ["js-sha3", "npm:0.9.3"]\
         ],\
         "linkType": "HARD"\
       }]\
