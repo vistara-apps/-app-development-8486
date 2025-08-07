@@ -1229,3 +1229,62 @@ body {
     justify-content: flex-start;
   }
 }
+
+/* Error Boundary Styles */
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-dark-bg);
+  color: var(--color-text);
+}
+
+.error-content {
+  text-align: center;
+  max-width: 600px;
+  padding: var(--space-8);
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.error-content h2 {
+  color: var(--color-error);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-2xl);
+}
+
+.error-content p {
+  margin-bottom: var(--space-6);
+  color: var(--color-gray-300);
+}
+
+.error-details {
+  text-align: left;
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background: var(--color-dark-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.error-details summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.error-details pre {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.error-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+}
