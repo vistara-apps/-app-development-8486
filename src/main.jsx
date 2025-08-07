@@ -1,3 +1,6 @@
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
+
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultConfig,
